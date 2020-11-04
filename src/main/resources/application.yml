@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: dsfa
+  application:
+    name: dsfa

@@ -1,0 +1,37 @@
+server:
+  port: 8090
+  servlet:
+    session:
+      timeout: 60m
+spring:
+  datasource:
+    monitor:
+      loginUsername: _admin2
+      loginPassword: dreamsoft
+    druids:
+    - url: jdbc:mysql://125.69.82.54:13201/dsfa_dsfa5?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useOldAliasMetadataBehavior=true&useSSL=false
+      username: dsfa5
+      password: Dsfa5_123456
+  redis:
+    host: localhost
+    database: 14
+    port: 6379
+#    password: 111111
+    jedis:
+      pool:
+        max-idle: 200
+        min-idle: 10
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+dsfa:
+  meta:
+    file:
+      path: E:/work/dream-test/web/test/
+  session:
+    rule:
+      valiRepeat: false
+dsf:
+  file:
+    upload-virtual-path: E:/work/dream-test/web/test/upload

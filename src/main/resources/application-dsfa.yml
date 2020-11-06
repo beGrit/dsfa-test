@@ -13,10 +13,10 @@ spring:
       username: dsfa5
       password: Dsfa5_123456
   redis:
-    host: localhost
-    database: 14
-    port: 6379
-#    password: 111111
+    host: 192.168.0.34
+    database: 2
+    port: 6406
+    password: DreamSoft_123
     jedis:
       pool:
         max-idle: 200
@@ -28,10 +28,10 @@ spring:
 dsfa:
   meta:
     file:
-      path: E:/work/dream-test/web/test/
+      path: /data/nginx/static/test-dsfa-platform-service-test-web/data/
   session:
     rule:
       valiRepeat: false
 dsf:
   file:
-    upload-virtual-path: E:/work/dream-test/web/test/upload
+    upload-virtual-path: /data/nginx/static/test-dsfa-platform-service-test-web/data/upload

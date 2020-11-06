@@ -13,10 +13,10 @@ spring:
       username: dsfa5
       password: Study_111111
   redis:
-    host: localhost
-    database: 14
-    port: 6379
-#    password: 111111
+    host: 192.168.0.34
+    database: 2
+    port: 6406
+    password: DreamSoft_123
     jedis:
       pool:
         max-idle: 200

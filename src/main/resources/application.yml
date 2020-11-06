@@ -1,5 +1,5 @@
 spring:
   profiles:
-    active: dsfa
+    active: test
   application:
     name: dsfa

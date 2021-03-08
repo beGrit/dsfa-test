@@ -24,6 +24,12 @@
 		<dependency>
 			<groupId>com.dsfa.platform</groupId>
 			<artifactId>dsfa-platform-starter-meta</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.dsfa.platform</groupId>
+					<artifactId>dsfa-platform-starter-meta-office</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 

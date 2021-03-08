@@ -6,13 +6,14 @@ import com.dsfa.platform.service.core.exception.PlatformCoreException;
 import com.dsfa.platform.service.core.session.UserSession;
 import com.dsfa.platform.service.core.web.login.model.dto.LoginInfo;
 import com.dsfa.platform.service.core.web.login.service.ILoginService;
-import com.dsfa.platform.starter.meta.part.oua2.model.po.DsfaOuaUser;
+import com.dsfa.platform.starter.meta.api.oua2.pojo.po.DsfaOuaUser;
 import com.dsfa.platform.starter.meta.part.oua2.service.IUserService;
 import com.dsfa.platform.starter.db.jfinal.kit.Kv;
 import com.dsfa.platform.starter.session.ISessionHolder;
 import com.dsfa.platform.starter.web.base.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author 文进

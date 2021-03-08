@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 平台核心服务
  * @author wenjin
  */
-@SpringBootApplication(scanBasePackages = "com.dsfa")
+@SpringBootApplication(scanBasePackages = {"com.dsfa","com.test"})
 public class DsfaPlatformServiceCoreApplication {
 
 	public static void main(String[] args) {

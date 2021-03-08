@@ -1,6 +1,6 @@
 package com.dsfa.platform.service.core.session;
 
-import com.dsfa.platform.starter.meta.part.oua2.model.po.DsfaOuaUser;
+import com.dsfa.platform.starter.meta.api.oua2.pojo.po.DsfaOuaUser;
 import com.dsfa.platform.starter.meta.session.UserInfoHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

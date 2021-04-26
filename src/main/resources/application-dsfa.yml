@@ -11,12 +11,12 @@ spring:
     druids:
     - url: jdbc:mysql://125.69.82.54:13201/dsfa_dsfa5?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useOldAliasMetadataBehavior=true&useSSL=false
       username: dsfa5
-      password: Dsfa5_123456
+      password: Study_111111
   redis:
-    host: 192.168.0.34
-    database: 2
-    port: 6406
-    password: DreamSoft_123
+    host: localhost
+    database: 14
+    port: 6379
+    password: 123456a
     jedis:
       pool:
         max-idle: 200
@@ -28,10 +28,18 @@ spring:
 dsfa:
   meta:
     file:
-      path: /data/nginx/static/test-dsfa-platform-service-test-web/data/
+      path: E:/work/dream-test/web/dsfa-platform-service-test-web/
   session:
     rule:
       valiRepeat: false
 dsf:
   file:
-    upload-virtual-path: /data/nginx/static/test-dsfa-platform-service-test-web/data/upload
+    upload-virtual-path: E:/work/dream-test/web/dsfa-platform-service-test-web/upload
+dubbo:
+  scan:
+    base-packages: com.dsfa
+  protocol:
+    name: dubbo
+    port: -1  #自动寻找可用端口
+#  cloud:
+#    subscribed-services: ${spring.application.name}

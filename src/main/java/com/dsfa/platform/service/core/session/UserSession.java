@@ -55,7 +55,4 @@ public class UserSession {
         userInfoHolder.put(key,value);
         return this;
     }
-
-
-
 }

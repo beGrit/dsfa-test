@@ -1,0 +1,45 @@
+server:
+  port: 8090
+  servlet:
+    session:
+      timeout: 120m
+spring:
+  datasource:
+    monitor:
+      loginUsername: _admin2
+      loginPassword: dreamsoft
+    druids:
+      - url: jdbc:mysql://125.69.82.54:13201/dsfa_dsfa5?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useOldAliasMetadataBehavior=true&useSSL=false
+        username: dsfa5
+        password: Study_111111
+  redis:
+    host: localhost
+    database: 14
+    port: 6379
+#    password: 123456a
+    jedis:
+      pool:
+        max-idle: 200
+        min-idle: 10
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+dsfa:
+  meta:
+    file:
+      path: C:\Users\pocky\Documents\dsfa-project\dsfa-platform-service-test-web\
+  session:
+    rule:
+      valiRepeat: false
+dsf:
+  file:
+    upload-virtual-path: C:\Users\pocky\Documents\dsfa-project\dsfa-platform-service-test-web\upload
+dubbo:
+  scan:
+    base-packages: com.dsfa
+  protocol:
+    name: dubbo
+    port: -1  #自动寻找可用端口
+#  cloud:
+#    subscribed-services: ${spring.application.name}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for dsfa-platform-service-test" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="D:/Program Files/apache-maven-3.2.2/dreamLib/org/mapstruct/mapstruct-processor/1.4.1.Final/mapstruct-processor-1.4.1.Final.jar" />
+          <entry name="D:/Program Files/apache-maven-3.2.2/dreamLib/org/mapstruct/mapstruct/1.4.1.Final/mapstruct-1.4.1.Final.jar" />
+          <entry name="D:/Program Files/apache-maven-3.2.2/dreamLib/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar" />
+        </processorPath>
+        <module name="dsfa-platform-service-test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dsfa-platform-service-test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

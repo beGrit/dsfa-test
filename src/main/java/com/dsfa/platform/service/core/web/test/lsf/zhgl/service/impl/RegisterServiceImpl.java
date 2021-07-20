@@ -15,6 +15,7 @@ import com.dsfa.platform.starter.db.jfinal.plugin.activerecord.Record;
 import com.dsfa.platform.starter.db.jfinal.plugin.activerecord.SqlPara;
 import com.dsfa.platform.starter.meta.core.model.persist.PersistData;
 import com.dsfa.platform.starter.web.base.BaseService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -94,10 +95,20 @@ public class RegisterServiceImpl extends BaseService implements RegisterService 
 
     @Override
     public int register(String personId) throws PlatformCoreException {
-        canRegister(personId);
+        // 判断是否可以注册
+        if (personId == null || personId.equals("")) { // 判断是否是新增请求
+            return 0;
+        }
+
+        // step1.判断用户名(accountName)是否可用
+        boolean b = accountManagementService.isAccountNameDuplicate(personId);
+        if (b) {
+            throw PlatformCoreException.create(500, "该账户名已被人使用了");
+        }
+
+        // 准备数据(person -> account)
         Person person = personManager.findOneById(personId);
         Kv condition = Kv.create();
-
         /**
          * 基础外来字段转移
          */
@@ -111,12 +122,10 @@ public class RegisterServiceImpl extends BaseService implements RegisterService 
         condition.set("sexValue", person.getStr("sex_value"));
         condition.set("departmentText", person.getStr("department_text"));
         condition.set("departmentValue", person.getStr("department_value"));
-
         /**
          * 外键添加
          */
         condition.set("peopleId", person.getStr("test_lsf_rygl_id"));
-
         /**
          * 新添字段
          */
@@ -127,6 +136,9 @@ public class RegisterServiceImpl extends BaseService implements RegisterService 
         condition.set("isenabledValue", AccountEnableStatus.NOT_ENABLED.getValue());
         condition.set("isenabledText", AccountEnableStatus.NOT_ENABLED.getText());
 
+        /**
+         * 插入记录到数据库
+         */
         SqlPara sqlPara = Account.DAO.getSqlPara(ACCOUNT_SQL_KEY + "insertOne", condition);
         int update = Db.update(sqlPara);
         return update;

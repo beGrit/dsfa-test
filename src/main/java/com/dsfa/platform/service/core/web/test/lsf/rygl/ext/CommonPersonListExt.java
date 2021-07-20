@@ -11,30 +11,4 @@ import com.dsfa.platform.starter.meta.core.model.query.list.ListQueryModel;
 @MetaAspect("test.lsf.rygl.commonPersonList")
 public class CommonPersonListExt extends MetaExt {
 
-    @Override
-    public void beforeQueryData(MetaPoint metaPoint, QueryModel queryModel) {
-        super.beforeQueryData(metaPoint, queryModel);
-    }
-
-    @Override
-    public void beforeListData(MetaPoint metaPoint, ListQueryModel listQueryModel) {
-        super.beforeListData(metaPoint, listQueryModel);
-    }
-
-    @Override
-    public void beforeBuild(MetaPoint metaPoint, MetaData meta) {
-        super.beforeBuild(metaPoint, meta);
-    }
-
-    @Override
-    public void beforeInitData(MetaPoint metaPoint, InitModel initModel) {
-        super.beforeInitData(metaPoint, initModel);
-    }
-
-    @Override
-    public void afterInitData(MetaPoint metaPoint, InitModel initModel) {
-        super.afterInitData(metaPoint, initModel);
-    }
-
-
 }

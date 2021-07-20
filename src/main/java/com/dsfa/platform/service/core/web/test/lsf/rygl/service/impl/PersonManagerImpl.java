@@ -17,13 +17,7 @@ public class PersonManagerImpl extends BaseService implements IPersonManager {
 
     @Override
     public Person findOneById(String id) {
-        Person person = Person.DAO.findByIdLoadColumns(id, "name");
-        /*
-            SqlPara sqlPara = Db.getSqlPara(SQL_KEY + "findById", Kv.by("id", id));
-            Person person = Person.DAO.findFirst(sqlPara);
-        */
-        new Person().setId("07f5e3e5f4534ae0aa76317a5d4d33a6").setName("bbb").save();
-        String name = person.getName();
+        Person person = Person.DAO.findById(id);
         return person;
     }
 }

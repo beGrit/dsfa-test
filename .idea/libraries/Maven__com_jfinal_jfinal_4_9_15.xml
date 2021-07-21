@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.jfinal:jfinal:4.9.15">
+    <CLASSES>
+      <root url="jar://D:/Program Files/apache-maven-3.2.2/dreamLib/com/jfinal/jfinal/4.9.15/jfinal-4.9.15.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Program Files/apache-maven-3.2.2/dreamLib/com/jfinal/jfinal/4.9.15/jfinal-4.9.15-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Program Files/apache-maven-3.2.2/dreamLib/com/jfinal/jfinal/4.9.15/jfinal-4.9.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

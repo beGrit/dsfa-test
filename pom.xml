@@ -32,6 +32,12 @@
 			</exclusions>
 		</dependency>
 
+		<dependency>
+			<groupId>com.jfinal</groupId>
+			<artifactId>jfinal</artifactId>
+			<version>4.9.15</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
